@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <FrameLayout
+        android:id="@+id/frg_change_page"
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" 
+        />
+        <!--  
+        <fragment 
+            android:id="@+id/frg_change_page"
+            android:name="com.karger.booknote.fragment.HomePageFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            />
+            -->
+
+    <include layout="@layout/footer" />
+	
+
+</LinearLayout>

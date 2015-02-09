@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ry_me_info_header"
+    android:layout_width="match_parent"
+    android:layout_height="160dip"
+    android:background="@drawable/default1_wall_img"
+    xmlns:app="http://schemas.android.com/apk/res/com.karger.readbooknote">
+    
+    <com.karger.booknote.widget.CircleImageView
+        android:id="@+id/civ_head_portail"
+        android:layout_width="40dip"
+        android:layout_height="40dip"
+        android:layout_centerInParent="true"
+        android:src="@drawable/avatar_default"
+        app:border_width="2dip"
+        app:border_color="@android:color/black"
+        />
+    
+    <ImageButton 
+        android:id="@+id/ib_change_user_info"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_above="@id/civ_head_portail"
+        android:layout_marginLeft="10dip"
+        />
+    <TextView 
+        android:id="@+id/tv_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/civ_head_portail"
+        android:text="@string/user_name"
+        android:textColor="@android:color/white"
+        />
+    <TextView 
+        android:id="@+id/tv_user_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_user_name"
+        android:text="@string/user_introduce"
+        android:textColor="@android:color/white"
+        />
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_select_picture_main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:background="@android:color/black"
+        >
+        <GridView 
+        android:id="@+id/gv_show_picture"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="5dip"
+        android:verticalSpacing="5dip"
+        android:numColumns="3"
+        />
+    </LinearLayout>
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:background="@android:color/darker_gray"
+        >
+        
+        <Button 
+            android:id="@+id/bt_all_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/all_picture"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dip"
+            android:layout_centerVertical="true"
+            />
+        
+        <Button 
+            android:id="@+id/bt_select_sure"
+            android:text="@string/button_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dip"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

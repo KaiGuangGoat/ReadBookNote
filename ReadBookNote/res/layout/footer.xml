@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_main_footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/friend_bar_bg" >
+
+    <Button
+        android:id="@+id/bt_main_page"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/me_button" />
+
+    <include layout="@layout/split_line" />
+
+    <!--  
+    <Button
+        android:id="@+id/bt_luntan"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/me_button" />
+
+    <include layout="@layout/split_line" />
+	
+    <Button
+        android:id="@+id/bt_nearby"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/me_button" />
+
+    <include layout="@layout/split_line" />
+	-->
+    <Button
+        android:id="@+id/bt_my_friend"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/friend_button" />
+
+    <include layout="@layout/split_line" />
+
+    <Button
+        android:id="@+id/bt_me_page"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/me_button" />
+
+</LinearLayout>
