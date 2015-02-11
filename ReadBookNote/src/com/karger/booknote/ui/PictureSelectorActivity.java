@@ -179,6 +179,7 @@ public class PictureSelectorActivity extends BaseActivity implements OnClickList
 				maxOfImgFolderPath = parentFile.getAbsolutePath();
 			}
 		}
+		mCursor.close();
 		imageFolder.setMaxOfFolderImgsCount(maxOfFolderImgsCount);
 		imageFolder.setMaxOfImgFolderPath(maxOfImgFolderPath);
 		imageFolder.setTotalImgs(totalImgs);
