@@ -74,7 +74,7 @@ public class PictureSelectorActivity extends BaseActivity implements OnClickList
 						@Override
 						public void onScrollStateChanged(AbsListView view, int scrollState) {
 							// TODO Auto-generated method stub
-							app.resetLockTime();
+							app.refleshLockTime();
 							switch(scrollState){
 							case OnScrollListener.SCROLL_STATE_FLING:
 								ImageLoader.getInstance().lock();
@@ -193,7 +193,7 @@ public class PictureSelectorActivity extends BaseActivity implements OnClickList
 		new Thread(){
 			@Override
 			public void run() {
-				fileList = FileUtil.fileList(parentFolderPath, new String[]{".jpg",".jpeg",".png"},true);
+				fileList = FileUtil.fileList(parentFolderPath,true, new String[]{".jpg",".jpeg",".png"});
 				mHanHandler.sendEmptyMessage(Constant.EMPTY_MSG_1);
 			}
 		}.start();

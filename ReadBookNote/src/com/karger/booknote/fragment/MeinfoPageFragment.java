@@ -30,15 +30,19 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class MeinfoPageFragment extends BaseFragment implements View.OnClickListener{
 	private CircleImageView headImg;
 	private TextView tv_userName,tv_userSign;
 	private RelativeLayout ry_me_info_head;
+	private ScrollView meinfoScrollView;
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,6 +63,22 @@ public class MeinfoPageFragment extends BaseFragment implements View.OnClickList
 		tv_userSign = (TextView) view.findViewById(R.id.tv_user_sign);
 		
 		ry_me_info_head = (RelativeLayout) view.findViewById(R.id.ry_me_info_header);
+		meinfoScrollView = (ScrollView) view.findViewById(R.id.sl_me_info_layout);
+		initScrollView();
+	}
+	
+	private void initScrollView(){
+		meinfoScrollView.setOnTouchListener(new OnTouchListener() {
+			
+			@Override
+			public boolean onTouch(View v, MotionEvent event) {
+				// TODO Auto-generated method stub
+				Log.e("MeinfoPage", "touch");
+				if(event.getAction() == MotionEvent.ACTION_UP)
+					app.refleshLockTime();
+				return false;
+			}
+		});
 	}
 
 	@Override

@@ -61,6 +61,7 @@ public class MainActicity extends BaseActivity{
 	protected void initView() {
 		// TODO Auto-generated method stub
 		super.initView();
+		Log.e("Main", "init");
 		currentFragmentPage = 0;
 		setContentView(app.getResLayout("main_layout"));
 		

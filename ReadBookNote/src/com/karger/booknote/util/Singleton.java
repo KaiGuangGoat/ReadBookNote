@@ -113,7 +113,7 @@ public class Singleton {
 				String pass = editText.getText().toString();
 				if(pass.equals(app.getStrPreference(Constant.PASS_WORD_PREFERENCE))){
 					lockScreenWindow.dismiss();
-					app.resetLockTime();
+					app.refleshLockTime();
 					editText.setText("");
 				}else{
 					app.toast("Password error");

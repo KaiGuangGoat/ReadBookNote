@@ -62,7 +62,7 @@ public class PictureSelectorMoreAdapter extends MyBaseAdapter {
 		});
 	}
 	
-	public class ViewHolder extends BaseViewHolder{
+	public  class ViewHolder extends BaseViewHolder{
 		ImageView imageView;
 		TextView textView;
 	}

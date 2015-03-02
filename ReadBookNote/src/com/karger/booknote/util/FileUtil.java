@@ -33,7 +33,14 @@ public class FileUtil {
 		}
 	}
 	
-	public static List<File> fileList(String parentPath,final String[] filterString,final boolean isEndWith){
+	/**
+	 * 获取指定目录下的符合条件的文件路径
+	 * @param parentPath 指定的父目录路径
+	 * @param isEndWith 如果为true则以结尾为条件进行过滤，false则以文件名包含过滤条件进行过滤
+	 * * @param filterString 符合文件的过滤条件
+	 * @return
+	 */
+	public static List<File> fileList(String parentPath,final boolean isEndWith,final String ...filterString){
 		File file = new File(parentPath);
 		if(!file.exists()){
 			return null;
@@ -62,4 +69,5 @@ public class FileUtil {
 		});
 		return Arrays.asList(files);
 	}
+
 }

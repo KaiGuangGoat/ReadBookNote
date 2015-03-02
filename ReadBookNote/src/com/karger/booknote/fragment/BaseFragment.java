@@ -36,6 +36,7 @@ public class BaseFragment extends Fragment{
 	}
 	
 	
+	
 	protected void initView(View view,LayoutInflater inflater){
 		
 	}

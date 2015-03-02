@@ -12,13 +12,13 @@ import android.widget.BaseAdapter;
 
 public abstract class MyBaseAdapter extends BaseAdapter{
 	
-	protected List dataList;
+	protected List dataList; //需要显示的数据
 	protected LayoutInflater inflater;
 	protected AppApplication app;
 	
-	public MyBaseAdapter(List filePaths,Context context){
+	public MyBaseAdapter(List dataList,Context context){
 		inflater = LayoutInflater.from(context);
-		this.dataList = filePaths;
+		this.dataList = dataList;
 		app = (AppApplication) context.getApplicationContext();
 	}
 
@@ -57,15 +57,26 @@ public abstract class MyBaseAdapter extends BaseAdapter{
 		return convertView;
 	}
 	
-	
+	/**
+	 * 获取ConvertView
+	 * @return
+	 */
 	protected abstract View getConvertView();
-	
+	/**
+	 * 初始化ViewHolder,把ViewHolder相关的属性进行赋值在这个方法里面进行
+	 * @param convertView
+	 * @return
+	 */
 	protected abstract BaseViewHolder initViewHolder(View convertView);
-	
+	/**
+	 * 这里主要对contentview的Item进行处理，相关的事件，逻辑都在这里进行
+	 * @param position
+	 * @param baseViewHolder
+	 */
 	protected abstract void setContentView(int position, BaseViewHolder baseViewHolder);
 	
-	
-	public class BaseViewHolder{
+	//持有Item相关的类
+	public static class BaseViewHolder{
 		
 	}
 

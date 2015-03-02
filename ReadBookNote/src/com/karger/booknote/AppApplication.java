@@ -262,7 +262,7 @@ public class AppApplication extends Application{
 		editor.putLong(key, value).commit();
 	}
 	
-	public void resetLockTime(){
+	public void refleshLockTime(){
 		saveLongPreference(Constant.LOCK_TIME, System.currentTimeMillis());
 	}
 	

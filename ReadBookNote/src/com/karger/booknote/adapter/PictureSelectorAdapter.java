@@ -103,7 +103,7 @@ public class PictureSelectorAdapter extends MyBaseAdapter{
 	
 	
 	
-	public class ViewHolder extends BaseViewHolder{
+	public static class ViewHolder extends BaseViewHolder{
 		ImageView imageView;
 		public CheckBox checkBox;
 	}

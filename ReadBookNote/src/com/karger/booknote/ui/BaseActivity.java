@@ -62,7 +62,7 @@ public  class BaseActivity extends FragmentActivity{
 		// TODO Auto-generated method stub
 		Log.e("BaseActivity", event.getAction()+"");
 		if(event.getAction() == MotionEvent.ACTION_DOWN)
-			app.saveLongPreference(Constant.LOCK_TIME, System.currentTimeMillis());
+			app.refleshLockTime();
 		return super.onTouchEvent(event);
 	}
 	

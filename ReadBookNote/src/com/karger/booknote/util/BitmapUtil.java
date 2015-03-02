@@ -1,10 +1,7 @@
 package com.karger.booknote.util;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.InputStream;
 import java.io.OutputStream;
 
 import android.graphics.Bitmap;
@@ -53,7 +50,7 @@ public class BitmapUtil {
 	
 	private static int getOptScale(int dstWidth,int dstHeight,String path){
 		Options opts = new Options();
-		opts.inJustDecodeBounds = true;
+		opts.inJustDecodeBounds = true;//只获取Bitmap高和宽的大小
 		int scale = 1;
 		BitmapFactory.decodeFile(path, opts);
 		if(dstWidth == 0 || dstHeight == 0){
